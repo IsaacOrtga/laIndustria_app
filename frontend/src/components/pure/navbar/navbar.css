@@ -1,0 +1,38 @@
+.navbarApp{
+    background: #242424;
+    height: 70px;
+    display: flex;
+}
+
+.navbarApp-img{
+    width: 120px;
+}
+
+.navbarApp-menu{
+    display: flex;
+    justify-content: end;
+}
+
+.navbarApp .nav-link,
+.navbarApp .navbar-brand,
+.navbarApp .navbar-toggler-icon,
+.navbarApp .dropdown-item {
+    color: #fff !important;
+}
+
+.navbarApp .nav-link:hover,
+.navbarApp .dropdown-item:hover {
+    color: #ddd !important;
+}
+
+.dropdown-menu.show{
+    background: #242424;
+}
+
+.navbarApp .dropdown-item:hover{
+    color: black!important;
+}
+
+.navbar-toggler{
+    background: white!important;
+}
