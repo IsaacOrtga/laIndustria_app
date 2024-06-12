@@ -2,7 +2,7 @@ const db = require('../config/db');
 
 const Teacher = {
   getAll: (callback) => {
-    const query = 'SELECT * FROM teachers';
+    const query = 'SELECT * FROM teacher';
     db.query(query, (err, results) => {
       if (err) {
         return callback(err);
@@ -12,7 +12,7 @@ const Teacher = {
   },
 
   getById: (id, callback) => {
-    const query = 'SELECT * FROM teachers WHERE id = ?';
+    const query = 'SELECT * FROM teacher WHERE id = ?';
     db.query(query, [id], (err, results) => {
       if (err) {
         return callback(err);
@@ -22,7 +22,7 @@ const Teacher = {
   },
 
   create: (teacher, callback) => {
-    const query = 'INSERT INTO teachers SET ?';
+    const query = 'INSERT INTO teacher SET ?';
     db.query(query, teacher, (err, results) => {
       if (err) {
         return callback(err);
@@ -32,7 +32,7 @@ const Teacher = {
   },
 
   update: (id, teacher, callback) => {
-    const query = 'UPDATE teachers SET ? WHERE id = ?';
+    const query = 'UPDATE teacher SET ? WHERE id = ?';
     db.query(query, [teacher, id], (err, results) => {
       if (err) {
         return callback(err);
@@ -42,7 +42,7 @@ const Teacher = {
   },
 
   delete: (id, callback) => {
-    const query = 'DELETE FROM teachers WHERE id = ?';
+    const query = 'DELETE FROM teacher WHERE id = ?';
     db.query(query, [id], (err, results) => {
       if (err) {
         return callback(err);
