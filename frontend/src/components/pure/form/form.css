@@ -1,0 +1,72 @@
+.formCompRegister-titleContent {
+    display: flex;
+    justify-content: center;
+}
+
+.form-floating>.small {
+    font-size: 0.875rem;
+    padding-top: 0.25rem;
+    padding-left: 10px;
+}
+
+.form-floating>.form-control {
+    padding-top: 1.5rem;
+}
+
+.formCompRegister-buttonContent {
+    display: flex;
+    justify-content: center;
+}
+
+.formCompRegister-button {
+    width: 10em;
+}
+
+.dropdownSpecializations{
+    height: 58px;
+}
+
+.formCompRegister-specializations {
+    position: relative;
+  }
+  
+  .formCompRegister-specializations .dropdown-toggle::after {
+    display: none;
+  }
+  
+  .formCompRegister-specializations .dropdown-toggle {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .formCompRegister-specializations .dropdown-toggle:hover {
+    overflow: visible;
+    white-space: unset;
+    text-overflow: unset;
+  }
+  
+  .formCompRegister-specializations .dropdown-menu {
+    left: auto !important;
+  }
+
+  .menu-specialization .menuList-spec{
+    color: white;
+  }
+
+.form-floating{
+    position: relative;
+}
+
+.input-icon{
+    position: absolute;
+    width: 25px;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.formCompRegister-selectDocType{
+    height: 58px;
+}
