@@ -1,3 +1,7 @@
+.formCompRegister{
+  width: 100%;
+}
+
 .formCompRegister-titleContent {
     display: flex;
     justify-content: center;

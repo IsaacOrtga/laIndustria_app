@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import './teacherRegister.css';
 import { FormComp } from "../../pure/form/FormComp.jsx";
+import { TeacherImgComp } from '../../pure/images/TeacherImg.jsx';
 
-export function TeacherRegister(){
+export function TeacherRegister() {
     const [formData, setFormData] = useState({
         name: '',
         lastname_1: '',
@@ -11,11 +12,11 @@ export function TeacherRegister(){
         email: '',
         phone: '',
         password: ''
-      })
+    })
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        try{
+        try {
             const response = await fetch('/api/teachers', {
                 method: 'POST',
                 headers: {
@@ -23,33 +24,38 @@ export function TeacherRegister(){
                 },
                 body: JSON.stringify(formData),
             });
-            if(response.ok){
+            if (response.ok) {
                 const newTeacher = await response.json();
-            alert('Profesor añadido a la bd:', newTeacher);            
-            }else{
+                alert('Profesor añadido a la bd:', newTeacher);
+            } else {
                 const errorData = await response.json();
                 console.error('Error al crear al profesor:', errorData);
             }
-        }catch(error){
+        } catch (error) {
             console.error('Error:', error);
         }
     }
 
-    return(
+    return (
         <div className='formRegisterTeacher'>
-            <FormComp 
-            formRegisterTitle='Alta profesor' 
-            showNameDataForm 
-            showDocumentDataForm
-            showSpecializationForm
-            showEmailForm
-            showPhoneForm
-            showPassField 
-            showPassField_2 
-            showDropzone
-            formData={formData}
-            setFormData={setFormData}
-            handleSubmit={handleSubmit} />
+            <div className='formRegisterTeacher-img'>
+                <TeacherImgComp />
+            </div>
+            <div className='formRegisterTeacher-form'>
+                <FormComp
+                    formRegisterTitle='Alta profesor'
+                    showNameDataForm
+                    showDocumentDataForm
+                    showSpecializationForm
+                    showEmailForm
+                    showPhoneForm
+                    showPassField
+                    showPassField_2
+                    showDropzone
+                    formData={formData}
+                    setFormData={setFormData}
+                    handleSubmit={handleSubmit} />
+            </div>
         </div>
     )
 }
