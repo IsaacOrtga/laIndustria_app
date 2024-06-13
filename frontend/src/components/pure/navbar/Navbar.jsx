@@ -22,7 +22,7 @@ export function NavbarApp() {
 
   const DrawerList = (
     <List>
-      {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+      {['Inbox', 'Starred', 'Send email', 'Calendario'].map((text, index) => (
         <ListItem Button key={text}>
           <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
           <ListItemText primary={text} />

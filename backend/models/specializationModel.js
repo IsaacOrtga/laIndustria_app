@@ -36,6 +36,3 @@ class Specialization {
 }
 
 module.exports = Specialization;
-
-
-module.exports = Specialization;
