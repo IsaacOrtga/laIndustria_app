@@ -2,19 +2,34 @@
   width: 100%;
 }
 
+
 .formCompRegister-titleContent {
     display: flex;
     justify-content: center;
 }
 
-.form-floating>.small {
-    font-size: 0.875rem;
-    padding-top: 0.25rem;
-    padding-left: 10px;
+.formCompRegister-fieldsContent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
 }
 
-.form-floating>.form-control {
-    padding-top: 1.5rem;
+.formCompRegister-field{
+  width: 300px;
+}
+
+.formCompRegister-field-documentation{
+  width: 250px;
+}
+
+.formCompRegister-field-lasname_2{
+  margin-right: 10px!important;
+}
+
+.doc-selector{
+  margin-left: 70px!important;
+  margin-right: 10px!important;
 }
 
 .formCompRegister-buttonContent {
